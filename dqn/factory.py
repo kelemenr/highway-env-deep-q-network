@@ -9,7 +9,7 @@ def model_factory(model_type):
     elif model_type == "LSTM":
         return DQN_LSTM
     else:
-        raise ValueError("Unknown loss: {}".format(model_type))
+        raise ValueError("Unknown model type: {}".format(model_type))
 
 
 def loss_function_factory(loss_type):
