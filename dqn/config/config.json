@@ -1,0 +1,37 @@
+{
+    "env_name": "highway-v0",
+    "env_config": {
+        "observation": {
+            "type": "OccupancyGrid",
+            "vehicles_count": 15
+        },
+        "vehicles_density": 1.2,
+        "reward_speed_range": [
+            26,
+            30
+        ],
+        "collision_reward": -100
+    },
+    "training_config": {
+        "batch_size": 64,
+        "hidden_size": 64,
+        "learning_rate": 0.0001,
+        "gamma": 0.99,
+        "epsilon_start": 0.9,
+        "epsilon_end": 0.05,
+        "epsilon_decay": 100,
+        "loss_type": "smooth_l1",
+        "optimizer_type": "adam",
+        "replay_buffer_size": 10000,
+        "target_update": 10,
+        "logs_dir": "./logs/run/",
+        "num_episodes": 200,
+        "output_name": "5",
+        "scheduler_step_size": 100,
+        "scheduler_lr_decay_factor": 0.01,
+        "scheduler": false,
+        "early_stopping_patience": 10,
+        "reward_improvement_threshold": 5.0,
+        "model_type": "LSTM"
+    }
+}
